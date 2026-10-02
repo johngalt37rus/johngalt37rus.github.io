@@ -4,173 +4,213 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Александр Гордин — ведущий. Иваново, Москва, Ярославль</title>
-  <meta name="description" content="Александр Гордин ведёт свадьбы, корпоративы и юбилеи. Иваново, Москва, Ярославль. Свадьба под ключ 150 000 ₽, корпоратив 100 000 ₽.">
+  <meta name="description" content="Александр Гордин ведёт свадьбы, корпоративы и юбилеи. Иваново, Москва, Ярославль.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    :root { --bg:#11120f; --bg-2:#262724; --ink:#f4f0e6; --muted:#b9a16e; --gold:#a49063; --gold-2:#b6a668; --flash:#fff705; --line:rgba(182,166,104,.35); }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; background:var(--bg); color:var(--ink); font-family:Manrope,Arial,sans-serif; font-weight:300; line-height:1.45; }
-    a { color:inherit; text-decoration:none; }
-    .wrap { width:min(1080px,calc(100% - 32px)); margin:0 auto; }
-    nav { position:sticky; top:0; z-index:10; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0; background:rgba(17,18,15,.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
-    .brand { font-weight:500; letter-spacing:.04em; }
-    .nav-links { display:flex; gap:18px; font-size:13px; color:var(--gold-2); font-weight:300; }
-    .nav-links a:hover { color:#fff; }
-    .btn { display:inline-flex; align-items:center; justify-content:center; background:var(--gold); color:#111; border:0; border-radius:2px; padding:12px 18px; font:400 14px/1 Manrope,Arial,sans-serif; cursor:pointer; }
-    .btn:hover { background:#c4b07a; }
-    .btn.ghost { background:transparent; color:var(--gold-2); border:1px solid var(--line); }
-    .hero { padding:72px 0 56px; }
-    .kicker { color:var(--muted); font-size:13px; letter-spacing:.16em; text-transform:uppercase; margin:0 0 18px; }
-    h1 { margin:0; font-weight:500; font-size:clamp(40px,7vw,76px); letter-spacing:-.03em; line-height:.95; }
-    .lead { max-width:640px; margin:22px 0 0; font-size:20px; }
-    .flash { display:inline-block; background:var(--flash); color:#111; padding:0 6px; font-weight:500; }
-    .hero-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
-    .meta { margin-top:28px; color:var(--gold-2); font-size:14px; }
-    section { padding:64px 0; border-top:1px solid var(--line); }
-    h2 { margin:0 0 18px; font-size:clamp(28px,4vw,42px); font-weight:500; letter-spacing:-.03em; }
-    .offer p { max-width:680px; font-size:18px; margin:0; }
-    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:28px; }
-    .card { background:var(--bg-2); padding:22px; min-height:240px; display:flex; flex-direction:column; }
-    .card h3 { margin:0 0 10px; font-size:22px; font-weight:500; }
-    .price { color:var(--flash); font-size:22px; font-weight:500; margin:0 0 12px; }
-    .card p { margin:0; color:#e7e1d4; }
-    .card .more { margin-top:auto; padding-top:16px; color:var(--gold-2); font-size:14px; }
-    .cases { display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:14px; }
-    .case { background:#1b1c18; border:1px dashed var(--line); min-height:220px; padding:18px; display:flex; flex-direction:column; justify-content:flex-end; }
-    .case.wide { min-height:280px; }
-    .tag { align-self:flex-start; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#111; background:var(--gold); padding:4px 8px; margin-bottom:auto; }
-    .case strong { display:block; font-weight:500; margin-bottom:6px; }
-    .case span { color:var(--gold-2); font-size:14px; }
-    .steps { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-top:24px; }
-    .step { border-top:2px solid var(--gold); padding-top:12px; }
-    .step b { display:block; color:var(--muted); font-weight:400; font-size:13px; margin-bottom:8px; }
-    form { display:grid; gap:10px; max-width:560px; margin-top:22px; }
-    label { font-size:13px; color:var(--gold-2); }
-    input, select, textarea { width:100%; background:#1b1c18; color:var(--ink); border:1px solid var(--line); border-radius:2px; padding:12px; font:400 16px/1.3 Manrope,Arial,sans-serif; }
-    textarea { min-height:90px; resize:vertical; }
-    .note { color:var(--gold-2); font-size:13px; margin-top:10px; }
-    footer { padding:28px 0 40px; border-top:1px solid var(--line); display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; color:var(--gold-2); font-size:14px; }
-    footer a { color:var(--gold-2); }
-    @media (max-width:800px) { .nav-links { display:none; } .grid, .cases, .steps { grid-template-columns:1fr; } .hero { padding-top:40px; } section { padding:44px 0; } }
+    :root {
+      --bg: #0e0e0c;
+      --ink: #f6f1e7;
+      --gold: #b9a16e;
+      --gold-2: #a49063;
+      --flash: #fff705;
+      --red: #d0121c;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: Manrope, Arial, sans-serif; font-weight: 300; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    nav {
+      position: fixed; inset: 0 0 auto 0; z-index: 20;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 28px; mix-blend-mode: difference;
+    }
+    .brand { letter-spacing: .18em; font-size: 13px; font-weight: 500; }
+    .nav-links { display: flex; gap: 22px; font-size: 13px; letter-spacing: .08em; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--gold-2); color: #111; border: 0; padding: 14px 22px;
+      font: 500 14px/1 Manrope, Arial, sans-serif; cursor: pointer;
+    }
+    .btn:hover { background: var(--flash); }
+    .frame {
+      min-height: 100svh; position: relative; display: flex; align-items: flex-end;
+      background: #111 center/cover no-repeat; overflow: hidden;
+    }
+    .frame::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,.15) 0%, rgba(0,0,0,.15) 40%, rgba(0,0,0,.72) 100%);
+    }
+    .frame .copy { position: relative; z-index: 1; padding: 8vh 6vw 7vh; max-width: 980px; }
+    .kicker { margin: 0 0 14px; color: var(--gold); letter-spacing: .22em; font-size: 12px; text-transform: uppercase; }
+    h1 { margin: 0; font-weight: 500; font-size: clamp(56px, 11vw, 128px); line-height: .86; letter-spacing: -.04em; }
+    .lead { max-width: 560px; font-size: clamp(18px, 2vw, 24px); margin: 22px 0 0; }
+    .flash { background: var(--flash); color: #111; padding: 0 .15em; font-weight: 500; }
+    .row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+    .ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.45); }
+    .split { display: grid; grid-template-columns: 1.1fr .9fr; min-height: 100svh; }
+    .split img { width: 100%; height: 100svh; object-fit: cover; }
+    .split .text { padding: 12vh 7vw; display: flex; flex-direction: column; justify-content: flex-end; }
+    h2 { margin: 0 0 16px; font-size: clamp(36px, 5vw, 68px); line-height: .92; letter-spacing: -.04em; font-weight: 500; }
+    .text p { font-size: 18px; max-width: 460px; color: #efe8da; }
+    .price { color: var(--flash); font-size: 28px; margin: 8px 0 16px; font-weight: 500; }
+    .tag {
+      display: inline-block; background: var(--gold-2); color: #111;
+      font-size: 11px; letter-spacing: .14em; text-transform: uppercase; padding: 5px 8px; margin-bottom: 12px;
+    }
+    .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; padding: 10vh 6vw; }
+    .step { border-top: 1px solid var(--gold); padding-top: 14px; }
+    .step b { display: block; color: var(--gold); font-weight: 400; font-size: 12px; letter-spacing: .14em; margin-bottom: 10px; }
+    .film { display: grid; grid-template-columns: 1.3fr 1fr 1fr; }
+    .film figure { margin: 0; position: relative; }
+    .film img { width: 100%; height: 72vh; object-fit: cover; }
+    .film figcaption {
+      position: absolute; left: 16px; bottom: 16px; letter-spacing: .14em; font-size: 12px; text-transform: uppercase;
+    }
+    form { display: grid; gap: 10px; max-width: 420px; margin-top: 18px; }
+    input, select {
+      width: 100%; background: rgba(0,0,0,.45); color: #fff; border: 1px solid rgba(185,161,110,.45);
+      padding: 14px; font: 400 16px Manrope, Arial, sans-serif;
+    }
+    footer { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 22px 6vw 32px; color: var(--gold); font-size: 14px; }
+    @media (max-width: 800px) {
+      nav { padding: 14px 16px; }
+      .nav-links { display: none; }
+      .split, .film, .steps { grid-template-columns: 1fr; }
+      .split img, .film img { height: 62vh; }
+      .frame .copy, .split .text { padding: 18vh 20px 36px; }
+      h1 { font-size: 64px; }
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <nav>
-      <a class="brand" href="#top">Гордин</a>
-      <div class="nav-links">
-        <a href="#offer">Оффер</a>
-        <a href="#services">Форматы</a>
-        <a href="#cases">Вечера</a>
-        <a href="#how">Как работаем</a>
-      </div>
-      <a class="btn" href="#form">Написать дату</a>
-    </nav>
-    <header class="hero" id="top">
+  <nav>
+    <a class="brand" href="#top">ГОРДИН</a>
+    <div class="nav-links">
+      <a href="#offer">Оффер</a>
+      <a href="#wedding">Свадьба</a>
+      <a href="#corp">Корпоратив</a>
+      <a href="#video">Видео</a>
+    </div>
+    <a class="btn" href="#form">Написать дату</a>
+  </nav>
+
+  <header class="frame" id="top" data-bg="img/hall.b64">
+    <div class="copy">
       <p class="kicker">Ведущий · Иваново · Москва · Ярославль</p>
       <h1>Александр<br>Гордин</h1>
-      <p class="lead">Я не главный герой вашего вечера. Главные — вы и гости. Зал смеётся, целуется и не стоит у стены.</p>
-      <div class="hero-actions">
+      <p class="lead">Я не главный герой вашего вечера. Главные — вы и гости.</p>
+      <div class="row">
         <a class="btn" href="#form">Написать дату</a>
-        <a class="btn ghost" href="https://t.me/as_gordin" target="_blank" rel="noopener">Telegram</a>
+        <a class="btn ghost" href="https://t.me/as_gordin">Telegram</a>
       </div>
-      <p class="meta">Амбассадор отличного настроения. Могу заплакать на церемонии.</p>
-    </header>
-    <section id="offer" class="offer">
+    </div>
+  </header>
+
+  <section class="split" id="offer">
+    <img data-src="img/portrait.b64" alt="Александр Гордин">
+    <div class="text">
+      <p class="kicker">Оффер</p>
       <h2>Один вечер. <span class="flash">Без чужого сценария.</span></h2>
-      <p>Свадьба, корпоратив, юбилей. Веду зал сам. Видео с вечера можно выложить на следующий день — не ждать месяц «исходники».</p>
-    </section>
-    <section id="services">
-      <h2>Форматы</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Свадьба под ключ</h3>
-          <p class="price">150 000 ₽</p>
-          <p>Церемония и банкет. Гости знают, куда идти, и не выпадают из вечера. Дата закрыта одним человеком, не тремя чатами.</p>
-          <p class="more">Иваново, Москва, Ярославль и выезд</p>
-        </article>
-        <article class="card">
-          <h3>Корпоратив</h3>
-          <p class="price">100 000 ₽</p>
-          <p>Люди говорят друг с другом, а не с телефоном. Утром в понедельник этот вечер не стыдно вспомнить директору.</p>
-          <p class="more">Юбилей компании — тем же форматом</p>
-        </article>
-        <article class="card">
-          <h3>Видеограф и рилсмейкер</h3>
-          <p class="price">цену скажу после даты</p>
-          <p>Короткое видео, которое гости пересылают. Не папка на 40 гигабайт, которую никто не откроет.</p>
-          <p class="more">Можно отдельно от ведения</p>
-        </article>
-      </div>
-    </section>
-    <section id="cases">
-      <h2>Вечера</h2>
-      <div class="cases">
-        <article class="case wide">
-          <span class="tag">плейсхолдер</span>
-          <strong>Свадьба. Зал с колоннами</strong>
-          <span>Сюда ролик церемонии. Пока кадр с стены ВК, не кейс.</span>
-        </article>
-        <article class="case">
-          <span class="tag">плейсхолдер</span>
-          <strong>Корпоратив</strong>
-          <span>Город, зал, сколько гостей — допишем с видео.</span>
-        </article>
-        <article class="case">
-          <span class="tag">плейсхолдер</span>
-          <strong>Юбилей</strong>
-          <span>Один вечер, одно видео, одна фраза гостя.</span>
-        </article>
-      </div>
-    </section>
-    <section id="how">
-      <h2>Как работаем</h2>
-      <div class="steps">
-        <div class="step"><b>01</b>Пишете дату и формат.</div>
-        <div class="step"><b>02</b>Созвон. Зал, гости, что нельзя.</div>
-        <div class="step"><b>03</b>Маршрут вечера. Без чужих конкурсов.</div>
-        <div class="step"><b>04</b>Договор. Дата держится.</div>
-        <div class="step"><b>05</b>Вечер. На следующий день — картинка.</div>
-      </div>
-    </section>
-    <section id="form">
-      <h2>Дата</h2>
-      <p>Напишите, что за вечер. Отвечу в Telegram.</p>
+      <p>Свадьба, корпоратив, юбилей. Веду зал сам. На следующий день есть картинка, а не папка, которую никто не откроет.</p>
+    </div>
+  </section>
+
+  <section class="frame" id="wedding" data-bg="img/wedding.b64">
+    <div class="copy">
+      <p class="kicker">01 — свадьба</p>
+      <h2>Свадьба под ключ</h2>
+      <p class="price">150 000 ₽</p>
+      <p class="lead">Церемония и банкет. Гости знают, куда идти, и не выпадают из вечера. Дата закрыта одним человеком.</p>
+    </div>
+  </section>
+
+  <section class="frame" id="corp" data-bg="img/corp.b64">
+    <div class="copy">
+      <p class="kicker">02 — зал</p>
+      <h2>Корпоратив</h2>
+      <p class="price">100 000 ₽</p>
+      <p class="lead">Люди говорят друг с другом. Утром в понедельник этот вечер не стыдно вспомнить директору. Юбилей — тем же форматом.</p>
+    </div>
+  </section>
+
+  <section class="frame" id="video" data-bg="img/mic.b64">
+    <div class="copy">
+      <p class="kicker">03 — картинка</p>
+      <h2>Видеограф и рилсмейкер</h2>
+      <p class="price">цену скажу после даты</p>
+      <p class="lead">Короткое видео, которое гости пересылают. Можно отдельно от ведения.</p>
+    </div>
+  </section>
+
+  <section class="film" id="cases">
+    <figure>
+      <img data-src="img/hero-jump.b64" alt="">
+      <figcaption>Плейсхолдер · вечер</figcaption>
+    </figure>
+    <figure>
+      <img data-src="img/up.b64" alt="">
+      <figcaption>Плейсхолдер · город</figcaption>
+    </figure>
+    <figure>
+      <img data-src="img/mic-hall.b64" alt="">
+      <figcaption>Плейсхолдер · зал</figcaption>
+    </figure>
+  </section>
+
+  <section id="how">
+    <div class="steps">
+      <div class="step"><b>01</b>Пишете дату и формат.</div>
+      <div class="step"><b>02</b>Созвон. Зал, гости, что нельзя.</div>
+      <div class="step"><b>03</b>Маршрут вечера. Без чужих конкурсов.</div>
+      <div class="step"><b>04</b>Договор. Дата держится.</div>
+      <div class="step"><b>05</b>Вечер. На следующий день — картинка.</div>
+    </div>
+  </section>
+
+  <section class="frame" id="form" data-bg="img/hero-jump.b64">
+    <div class="copy">
+      <p class="kicker">Дата</p>
+      <h2>Напишите, что за вечер.</h2>
       <form id="lead">
-        <label>Имя<input name="name" required placeholder="Как к вам обращаться"></label>
-        <label>Дата<input name="date" type="date" required></label>
-        <label>Формат
-          <select name="format">
-            <option>Свадьба под ключ</option>
-            <option>Корпоратив</option>
-            <option>Юбилей</option>
-            <option>Видеограф и рилсмейкер</option>
-          </select>
-        </label>
-        <label>Город<input name="city" placeholder="Иваново"></label>
-        <label>Коротко<input name="note" placeholder="Сколько гостей, какой зал"></label>
+        <input name="name" required placeholder="Имя">
+        <input name="date" type="date" required>
+        <select name="format">
+          <option>Свадьба под ключ</option>
+          <option>Корпоратив</option>
+          <option>Юбилей</option>
+          <option>Видеограф и рилсмейкер</option>
+        </select>
+        <input name="city" placeholder="Город">
         <button class="btn" type="submit">Написать в Telegram</button>
       </form>
-      <p class="note">Заявка открывает чат t.me/as_gordin. Почта на странице не копится.</p>
-    </section>
-    <footer>
-      <span>Александр Гордин · ведущий</span>
-      <span>
-        <a href="https://t.me/as_gordin">Telegram</a>
-        · <a href="https://vk.ru/as_gordin">ВК</a>
-        · <a href="https://instagram.com/as_gordin">Instagram</a>
-      </span>
-    </footer>
-  </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Александр Гордин · ведущий</span>
+    <span><a href="https://t.me/as_gordin">Telegram</a> · <a href="https://vk.ru/as_gordin">ВК</a> · <a href="https://instagram.com/as_gordin">Instagram</a></span>
+  </footer>
   <script>
+    function paint() {
+      document.querySelectorAll('[data-bg]').forEach(function (el) {
+        fetch(el.dataset.bg).then(function (r) { return r.text(); }).then(function (t) {
+          el.style.backgroundImage = "url(data:image/jpeg;base64," + t.trim() + ")";
+        });
+      });
+      document.querySelectorAll('img[data-src]').forEach(function (img) {
+        fetch(img.dataset.src).then(function (r) { return r.text(); }).then(function (t) {
+          img.src = "data:image/jpeg;base64," + t.trim();
+        });
+      });
+    }
+    paint();
     document.getElementById('lead').addEventListener('submit', function (e) {
       e.preventDefault();
       var d = new FormData(e.target);
-      var text = ['Дата: ' + d.get('date'), 'Формат: ' + d.get('format'), 'Имя: ' + d.get('name'), 'Город: ' + (d.get('city') || '—'), d.get('note') || ''].filter(Boolean).join('\n');
-      window.location.href = 'https://t.me/as_gordin?text=' + encodeURIComponent(text);
+      var text = ['Дата: ' + d.get('date'), 'Формат: ' + d.get('format'), 'Имя: ' + d.get('name'), 'Город: ' + (d.get('city') || '—')].join('\n');
+      location.href = 'https://t.me/as_gordin?text=' + encodeURIComponent(text);
     });
   </script>
 </body>
